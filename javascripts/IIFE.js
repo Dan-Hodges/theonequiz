@@ -2,10 +2,10 @@ var FruitMaker = (function() {
   var fruitArray = ["apples", "bananas", "cherries", "huckleberries"];
 
   return {
-    getFruit: function() {
+    getFruits: function() {
       return fruitArray;
     },
-    setFruit: function(fruit) {
+    addFruit: function(fruit) {
       fruitArray.push(fruit);
     }
   };
