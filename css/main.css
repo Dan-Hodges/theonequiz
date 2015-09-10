@@ -1,0 +1,27 @@
+section:first-child li {
+	color: blue;
+}
+/*li {
+	display: inline;
+}*/
+
+section:nth-child(odd) {
+	border: 5px solid black;
+}
+
+li:nth-child(even) {
+	background: lime;
+}
+aside:first-of-type {
+	color: blue;
+}
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+.clear {
+	clear: both;
+}
