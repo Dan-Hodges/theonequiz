@@ -33,11 +33,11 @@ http-server
 1. What is a callback? Why do we use them in JavaScript? Provide your answer, and code a simple example below.
 
   **Student answer: A callback is simply a funciton that is executed in after another process of events- "do this, then execute (callback) this function"
-
+  ````
   #(myButton).click(function() {
     console.log("hello, world"); // console.log is called ("back") when the click funtion executes.
   });
-
+  ````
   **
 
 ## Functions and operators
@@ -75,18 +75,18 @@ http-server
 
 1. Provide a simple example of the syntax for handling a Promise.
   **Student answer: 
-
-  function getStuff() {
-    var deferred = Q.defer();
-    return deferred.promise;
-  }
-
-
-  getStuff()
-    .then(function(data) {
-      console.log(data);
-    });
-
+````
+function getStuff() {
+  var deferred = Q.defer();
+  return deferred.promise;
+}
+````
+````
+getStuff()
+  .then(function(data) {
+    console.log(data);
+  });
+````
   **
 
 ## Scope and this
