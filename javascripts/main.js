@@ -1,4 +1,3 @@
-var Planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
 element = document.getElementById("vanilla_output");
 element.innerHTML = "This content generated with vanilla JavaScript";
 $(document).ready(function(){
@@ -21,24 +20,49 @@ function doMath(num1, num2, functionRef){
   return functionRef(num1, num2);
 }
 
-Planets = Planets.sort();
-console.log("Sorted Planets :", Planets);
-planetString = Planets.toString();
-planetString = planetString.split("").reverse().join("");
-backwardsPlanets = planetString.split(',');
-console.log("backwardsPlanets :", backwardsPlanets);
+/// Array Methods ///
+var Planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
+console.log('Planets :', Planets);
 
-longPlanets = [];
-for (var i = 0; i < Planets.length; i++) {
-	if (Planets[i].length > 6) {
-		longPlanets.push(Planets[i]);
-	}
+function sortedPlanets(array) {
+  var sortedPlanets = array.slice().sort();
+  console.log("sortedPlanets :", sortedPlanets);
+  return sortedPlanets
 }
-console.log("longPlanets", longPlanets);
+sortedPlanets(Planets);
 
 
-$.ajax({
-  url: "data/animals.json"
-}).done(function(data) {
-  console.log("animals :", data.animals);
-});
+function flipChar(element, index, array) {
+	return array[index] = element.split("").reverse().join("");
+}
+function reversedPlanets (array) {
+	var reversedPlanets = array.slice();
+	reversedPlanets.forEach(flipChar);
+	console.log("reversedPlanets:", reversedPlanets);
+	return reversedPlanets;
+}
+reversedPlanets(Planets);
+
+
+function longPlanets (array) {
+	var longPlanets = [];
+	for (var i = 0; i < array.length; i++) {
+		if (array[i].length > 6) {
+			longPlanets.push(array[i]);
+		}
+	}
+	console.log("longPlanets", longPlanets);
+}
+longPlanets(Planets);
+
+/// XHR ///
+
+function getAnimals () {
+	$.ajax({
+	  url: "data/animals.json"
+	}).done(function(data) {
+	  console.log("animals :", data.animals);
+	  return data.animals;
+	});
+}
+getAnimals();

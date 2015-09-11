@@ -1,9 +1,9 @@
 section:first-child li {
 	color: blue;
 }
-/*li {
+li {
 	display: inline;
-}*/
+}
 
 section:nth-child(odd) {
 	border: 5px solid black;

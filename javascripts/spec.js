@@ -43,7 +43,6 @@ $(document).ready(function() {
     it("it should output jQuery content", function() {
       expect(jq.innerHTML).toBe("This content generated with jQuery");
     });
-    
   });
 
   describe("AJAX", function() {
